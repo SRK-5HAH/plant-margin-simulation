@@ -287,7 +287,24 @@ GROUPS = {
 
 rows = []
 for group, metrics in GROUPS.items():
-    rows.append({"Metric": f"<b>{group}</b>", "Baseline": "", "Current": "", "Delta": ""})
+    # Add formula next to baseline value if exists
+if m in FORMULAS:
+    baseline_display = f"""
+    {base_str}
+    <div style='font-size:12px; color:#9ca3af; margin-top:4px;'>
+        ({m} = {FORMULAS[m]})
+    </div>
+    """
+else:
+    baseline_display = base_str
+
+rows.append({
+    "Metric": m,
+    "Baseline": baseline_display,
+    "Current": colorize(f"{curr_str} {arrow(d)}", d),
+    "Delta": colorize(delta_str, d),
+})
+
     for m in metrics:
         b = baseline[m]
         c = current[m]
@@ -327,5 +344,6 @@ st.markdown(
 
 with st.expander("Baseline inputs (fixed)"):
     st.write(BASELINE)
+
 
 
