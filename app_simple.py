@@ -251,6 +251,17 @@ k3.markdown(
 # ======================================================
 # Grouped Table
 # ======================================================
+FORMULAS = {
+    "Revenue": "Unit Price × Net Saleable Tons",
+    "Variable cost": "Processed Tons × (Energy + Labor + Other)",
+    "Contribution": "Revenue − Variable Cost",
+    "Contribution %": "Contribution ÷ Revenue",
+    "EBITDA": "Contribution − Fixed Cost",
+    "EBITDA %": "EBITDA ÷ Revenue",
+    "Var cost / processed ton": "Variable Cost ÷ Processed Tons",
+    "Contribution / processed ton": "Contribution ÷ Processed Tons",
+}
+
 GROUPS = {
     "Production & Time": [
         "Operating hours",
@@ -316,4 +327,5 @@ st.markdown(
 
 with st.expander("Baseline inputs (fixed)"):
     st.write(BASELINE)
+
 
