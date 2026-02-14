@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+st.warning("Educational simulation only. Not official financial reporting. Use for learning and discussion.")
+st.caption("v0.1 (testing)")
 
 st.set_page_config(page_title="Plant Margin Simulator", layout="wide")
 
@@ -128,7 +130,7 @@ def reset_to_baseline():
 # ======================================================
 # Page Title
 # ======================================================
-st.title("Bunge Plant Margin Simulator")
+st.title("Educational simulation - Plant Margin Simulator - V1.0")
 st.caption("Baseline is fixed. Adjust current scenario and compare results.")
 
 # ======================================================
@@ -314,3 +316,4 @@ st.markdown(
 
 with st.expander("Baseline inputs (fixed)"):
     st.write(BASELINE)
+
