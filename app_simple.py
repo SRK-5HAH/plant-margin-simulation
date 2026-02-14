@@ -144,12 +144,12 @@ with st.sidebar:
     st.header("🎮 Adjust Current Scenario")
 
     st.subheader("📈 Market & Throughput")
-    price_per_ton = st.slider("💲 Selling price ($/ton)-$500", 200, 1200, key="price_per_ton", step=5)
-    run_rate_tph = st.slider("🏭 Run rate (tons/hour)-120 tons", 20, 400, key="run_rate_tph", step=5)
+    price_per_ton = st.slider("💲 Selling price ($/ton) - $500", 200, 1200, key="price_per_ton", step=5)
+    run_rate_tph = st.slider("🏭 Run rate (tons/hour) - 120 tons", 20, 400, key="run_rate_tph", step=5)
 
     st.subheader("⏱ Time")
     planned_hours_per_month = st.slider("🗓 Planned hours/month - 600 hrs", 200, 744, key="planned_hours_per_month", step=10)
-    downtime_hours = st.slider("🛑 Downtime hours- 40 hrs", 0, planned_hours_per_month, key="downtime_hours", step=1)
+    downtime_hours = st.slider("🛑 Downtime hours - 40 hrs", 0, planned_hours_per_month, key="downtime_hours", step=1)
 
     st.subheader("🧪 Yield & Quality")
     yield_pct = st.slider("🎯 Yield (%) - 95%", 80.0, 99.5, key="yield_pct", step=0.1)
@@ -370,6 +370,7 @@ st.markdown(
 
 with st.expander("Baseline inputs (fixed)"):
     st.write(BASELINE)
+
 
 
 
