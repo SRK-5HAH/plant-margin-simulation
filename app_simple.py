@@ -144,22 +144,22 @@ with st.sidebar:
     st.header("🎮 Adjust Current Scenario")
 
     st.subheader("📈 Market & Throughput")
-    price_per_ton = st.slider("💲 Selling price ($/ton)- 500", 200, 1200, key="price_per_ton", step=5)
-    run_rate_tph = st.slider("🏭 Run rate (tons/hour)", 20, 400, key="run_rate_tph", step=5)
+    price_per_ton = st.slider("💲 Selling price ($/ton)-$500", 200, 1200, key="price_per_ton", step=5)
+    run_rate_tph = st.slider("🏭 Run rate (tons/hour)-120 tons", 20, 400, key="run_rate_tph", step=5)
 
     st.subheader("⏱ Time")
-    planned_hours_per_month = st.slider("🗓 Planned hours/month", 200, 744, key="planned_hours_per_month", step=10)
-    downtime_hours = st.slider("🛑 Downtime hours", 0, planned_hours_per_month, key="downtime_hours", step=1)
+    planned_hours_per_month = st.slider("🗓 Planned hours/month - 600 hrs", 200, 744, key="planned_hours_per_month", step=10)
+    downtime_hours = st.slider("🛑 Downtime hours- 40 hrs", 0, planned_hours_per_month, key="downtime_hours", step=1)
 
     st.subheader("🧪 Yield & Quality")
-    yield_pct = st.slider("🎯 Yield (%)", 80.0, 99.5, key="yield_pct", step=0.1)
-    scrap_pct = st.slider("🧯 Scrap (%)", 0.0, 10.0, key="scrap_pct", step=0.1)
+    yield_pct = st.slider("🎯 Yield (%) - 95%", 80.0, 99.5, key="yield_pct", step=0.1)
+    scrap_pct = st.slider("🧯 Scrap (%) - 1%", 0.0, 10.0, key="scrap_pct", step=0.1)
 
     st.subheader("💸 Costs")
-    energy_cost_per_ton = st.slider("⚡ Energy ($/ton)", 0, 200, key="energy_cost_per_ton", step=1)
-    labor_cost_per_ton = st.slider("👷 Labor ($/ton)", 0, 200, key="labor_cost_per_ton", step=1)
-    other_variable_cost_per_ton = st.slider("🧰 Other variable ($/ton)", 0, 400, key="other_variable_cost_per_ton", step=1)
-    fixed_cost_per_month = st.slider("🏢 Fixed cost ($/month)", 0, 20_000_000, key="fixed_cost_per_month", step=50_000)
+    energy_cost_per_ton = st.slider("⚡ Energy ($/ton) - $35", 0, 200, key="energy_cost_per_ton", step=1)
+    labor_cost_per_ton = st.slider("👷 Labor ($/ton) - $25", 0, 200, key="labor_cost_per_ton", step=1)
+    other_variable_cost_per_ton = st.slider("🧰 Other variable ($/ton) - $60", 0, 400, key="other_variable_cost_per_ton", step=1)
+    fixed_cost_per_month = st.slider("🏢 Fixed cost ($/month) - $20,000,000", 0, 20_000_000, key="fixed_cost_per_month", step=50_000)
 
 # ======================================================
 # Compute baseline and current
@@ -370,6 +370,7 @@ st.markdown(
 
 with st.expander("Baseline inputs (fixed)"):
     st.write(BASELINE)
+
 
 
 
