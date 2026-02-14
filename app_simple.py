@@ -144,7 +144,7 @@ with st.sidebar:
     st.header("🎮 Adjust Current Scenario")
 
     st.subheader("📈 Market & Throughput")
-    price_per_ton = st.slider("💲 Selling price ($/ton)", 200, 1200, key="price_per_ton", step=5)
+    price_per_ton = st.slider("💲 Selling price ($/ton)- 500", 200, 1200, key="price_per_ton", step=5)
     run_rate_tph = st.slider("🏭 Run rate (tons/hour)", 20, 400, key="run_rate_tph", step=5)
 
     st.subheader("⏱ Time")
@@ -370,6 +370,7 @@ st.markdown(
 
 with st.expander("Baseline inputs (fixed)"):
     st.write(BASELINE)
+
 
 
 
